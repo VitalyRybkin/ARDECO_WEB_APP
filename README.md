@@ -29,17 +29,17 @@
 ## ARDECO WEBSITE - dry mixture materials production and trading
 ***
 ***
-### ОПИСАНИЕ:
+### DESCRIPTION:
 business card site of dry mixture materials production company
 ***
-### СТЭК:
+### TECHNOLOGIES:
 + HTML5, CSS3
 + JavaScript
 + SASS/SCSS
 + Express
 + EJS, EmailJS
 ***
-### СТРУКТУРА ПРОЕКТА:
+### PROJECT STRUCTURE:
 + **index.js** - main ExpressJS project file;
 + **views** - pages and EJS templates;
 + **static** - css files, images and icons, JS-files, PDF-files;
