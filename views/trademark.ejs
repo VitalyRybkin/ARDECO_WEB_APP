@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%- include("layouts/links.ejs") %>
+    <%- include("layouts/yandex.ejs") %>
+
+    <script src="../static/script/main.js" defer></script>
+
+    <title><%=title %></title>
+</head>
+<body>
+
+    <%- include("layouts/header.ejs") %>
+
+    <div class="center">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="/">ГЛАВНАЯ</a></li>
+                <li><a class="breadcrumbs__disabled" href="#">|</a></li>
+                <li><a class="breadcrumbs__disabled" href="#">ТОВАРНЫЙ ЗНАК</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="center">
+        <div class="container">
+            <h4 class="contact-form__title">ТОВАРНЫЙ ЗНАК:</h4>
+            <div style="padding: 2rem; display: flex; justify-content: center">
+                <img src="/static/images/logo-ardeco.png" alt="ARDECO logo">
+            </div>
+            <p class="paragraph">
+                Изображения и наименования (средства индивидуализации), представленные в этом разделе сайта, являются зарегистрированными товарными знаками, знаками обслуживания, коммерческими обозначениями и фирменным наименованием ООО «Авангард» и находятся под правовой охраной.
+            </p>
+            <p class="paragraph">
+                Правообладателем всех средств индивидуализации, представленных в настоящем разделе сайта, является ООО «Авангард».
+            </p>
+            <p class="paragraph">
+                Никто не вправе использовать средства индивидуализации, представленные в настоящем разделе сайта, без специального письменного согласия ООО «Авангард».
+            </p>
+            <p class="paragraph">
+                Использование средств индивидуализации без такого согласия является незаконным и влечёт ответственность, установленную Кодексом об административных правонарушениях РФ, а также Гражданским и Уголовным кодексами РФ.
+            </p>
+        </div>
+    </main>
+
+    <%- include("layouts/footer.ejs") %>
+
+</body>
+</html>

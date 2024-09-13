@@ -1,0 +1,197 @@
+{
+  "КЛАССИКА": {
+    "route": "classic",
+    "materials": {
+      "КРУПНОЗЕРНИСТАЯ": {
+        "route": "/classic/hard-grained",
+        "pic": "/static/images/bags/ARDECOClassicHardGrained.png",
+        "title": "КРУПНОЗЕРНИСТАЯ",
+        "color": "светло-бежевая",
+        "fraction": "2,5_мм",
+        "hardness": "1,0_МПа",
+        "description": "Ремонт и реставрация по каменным и кирпичным поверхностям, старой известковой и известково-гипсовой штукатурке",
+        "filler": "известь",
+        "adding": ""
+      },
+      "МЕЛКОЗЕРНИСТАЯ": {
+        "route": "/classic/fine-grained",
+        "pic": "/static/images/bags/ARDECOClassicFineGrained.png",
+        "title": "МЕЛКОЗЕРНИСТАЯ",
+        "color": "светло-бежевая",
+        "fraction": "0,63_мм",
+        "hardness": "0,5_МПа",
+        "description": "Накрывочный слой при реставрации и реконструкции по грубой известковой, известково-цементной, известково-гипсовой штукатурке, по старой известковой штукатурке",
+        "filler": "известь",
+        "adding": ""
+      },
+      "БАЗОВАЯ": {
+        "route": "/classic/classic-base",
+        "pic": "/static/images/bags/ARDECOClassicBase.png",
+        "title": "БАЗОВАЯ",
+        "color": "светло-бежевая",
+        "fraction": "2,5_мм",
+        "hardness": "2,5_МПа",
+        "description": "Ремонт и реставрация по каменной и кирпичной поверхностям, старой известковой и известково-цементной штукатурке",
+        "filler": "известь",
+        "adding": "гидравлическая"
+      },
+      "ФИНИШНАЯ": {
+        "route": "/classic/classic-finishing",
+        "pic": "/static/images/bags/ARDECOClassicFinishing.png",
+        "title": "ФИНИШНАЯ",
+        "color": "светло-бежевая",
+        "fraction": "0,63_мм",
+        "hardness": "1,0_МПа",
+        "description": "Накрывочный (финишный) слой при реставрации и реконструкции по грубой известковой и известково-цементной штукатурке, по старой известковой штукатурке, а так же для обмазки по кирпичной или каменной кладке",
+        "filler": "известь",
+        "adding": "гидравлическая"
+      },
+      "ПРОФИЛЬНАЯ": {
+        "route": "/classic/profile",
+        "pic": "/static/images/bags/ARDECOClassicProfile.png",
+        "title": "ПРОФИЛЬНАЯ",
+        "color": "светло-бежевая",
+        "fraction": "0,63_мм",
+        "hardness": "1,0_МПа",
+        "description": "Для профилированных элементов фасада, а так же для создания финишного слоя при реставрации и реконструкции по грубой известковой и известково-цементной штукатурке, по старой известковой штукатурке",
+        "filler": "известь",
+        "adding": "гидравлическая"
+      }
+    }
+  },
+  "ПРОФИ": {
+    "route": "profi",
+    "materials": {
+      "ПРОФИ": {
+        "route": "/profi/profi",
+        "pic": "/static/images/bags/ARDECOProfi.png",
+        "title": "ПРОФИ",
+        "color": "светло-бежевая",
+        "fraction": "0,1_мм",
+        "hardness": "",
+        "description": "Финишное выравнивания поверхностей под окраску, оштукатуренных известковыми, известково-цементными, цементными и санирующими штукатурками",
+        "filler": "известь",
+        "adding": ""
+      },
+      "БАЗОВАЯ": {
+        "route": "/profi/profi-base",
+        "pic": "/static/images/bags/ARDECOProfiBase.png",
+        "title": "БАЗОВАЯ",
+        "color": "светло-бежевая",
+        "fraction": "0,63_мм",
+        "hardness": "1,0_МПа",
+        "description": "Выравнивания поверхностей под окраску, оштукатуренных известковыми, известково-цементными, цементными и санирующими штукатурками",
+        "filler": "известь",
+        "adding": "гидравлическая"
+      },
+      "ФИНИШНАЯ": {
+        "route": "/profi/profi-finishing",
+        "pic": "/static/images/bags/ARDECOProfiFinishing.png",
+        "title": "ФИНИШНАЯ",
+        "color": "светло-бежевая",
+        "fraction": "0,1_мм",
+        "hardness": "0,5_МПа",
+        "description": "Финишное выравнивания поверхностей под окраску, оштукатуренных известковыми, известково-цементными, цементными и санирующими штукатурками",
+        "filler": "известь",
+        "adding": "пуццолановая"
+      }
+    }
+  },
+  "ОРИГИНАЛЬНЫЕ": {
+    "route": "original",
+    "materials": {
+      "БАЗОВАЯ": {
+        "route": "/original/original-base",
+        "pic": "/static/images/bags/ARDECOOriginalBase.png",
+        "title": "БАЗОВАЯ",
+        "color": "светло-бежевая",
+        "fraction": "2,5_мм",
+        "hardness": "1,5_МПа",
+        "description": "Ремонт и реставрация по каменным и кирпичным поверхностям, старой известковой и известково-гипсовой штукатурке",
+        "filler": "известь, гипс",
+        "adding": ""
+      },
+      "ФИНИШНАЯ": {
+        "route": "/original/original-finishing",
+        "pic": "/static/images/bags/ARDECOOriginalFinishing.png",
+        "title": "ФИНИШНАЯ",
+        "color": "светло-бежевая",
+        "fraction": "0,63_мм",
+        "hardness": "1,5_МПа",
+        "description": "Оштукатуривание и ремонт стен, потолков, профилированных декоративных деталей по известковым и известково-гипсовым штукатуркам внутри помещений",
+        "filler": "известь, гипс",
+        "adding": ""
+      }
+    }
+  },
+  "САНИРУЮЩИЕ": {
+    "route": "sanitizing",
+    "materials": {
+      "САНИРУЮЩАЯ": {
+        "route": "/sanitize/sanitizing",
+        "pic": "/static/images/bags/ARDECOSanitizing.png",
+        "title": "САНИРУЮЩАЯ",
+        "color": "светло-бежевая",
+        "fraction": "2,5_мм",
+        "hardness": "2,5_МПа",
+        "description": "Осушение и выравнивание стен из каменных и кирпичных оснований, газобетона, заделки стыков и отдельных неровностей оснований в сухих и влажных помещениях и для наружных работ",
+        "filler": "известь",
+        "adding": "пуццолановая"
+      },
+      "НАКРЫВОЧНАЯ": {
+        "route": "/sanitize/covering",
+        "pic": "/static/images/bags/ARDECOCovering.png",
+        "title": "НАКРЫВОЧНАЯ",
+        "color": "светло-бежевая",
+        "fraction": "0,63_мм",
+        "hardness": "1,0_МПа",
+        "description": "Накрывочный слой по штукатурке «ARDECO САНИРУЮЩАЯ»",
+        "filler": "известь",
+        "adding": "пуццолановая"
+      }
+    }
+  },
+  "КЛАДОЧНЫЕ": {
+    "route": "masonry",
+    "materials": {
+      "БЛОК": {
+        "route": "/masonry/mortar",
+        "pic": "/static/images/bags/ARDECOBlock.png",
+        "title": "БЛОК",
+        "color": "светло-бежевая",
+        "fraction": "2,5_мм",
+        "hardness": "7,5_МПа",
+        "description": "Укладка силикатного и керамического кирпича, каменных блоков при выполнении работ по реставрации и реконструкции",
+        "filler": "известь",
+        "adding": "гидравлическая"
+      }
+    }
+  },
+  "РЕМСОСТАВЫ": {
+    "route": "repair",
+    "materials": {
+      "КАМНЕЗАМЕНИТЕЛЬ": {
+        "route": "/repair/stonesubst",
+        "pic": "/static/images/bags/ARDECOStone.png",
+        "title": "КАМНЕЗАМЕНИТЕЛЬ",
+        "color": "подбирается",
+        "fraction": "2,5_мм",
+        "hardness": "5,0_МПа",
+        "description": "Воссоздание целостности поверхности лицевого и природного камня, восполнение утрат в исторической каменной и кирпичной кладке толщиной до 50_мм",
+        "filler": "известь, цемент",
+        "adding": ""
+      },
+      "ШОВНЫЙ": {
+        "route": "/repair/seam",
+        "pic": "/static/images/bags/ARDECOSeam.png",
+        "title": "ШОВНЫЙ",
+        "color": "светло-бежевая",
+        "fraction": "2,5_мм",
+        "hardness": "2,5_МПа",
+        "description": "Восстановление разрушенного шовного раствора облицовки из керамического и силикатного кирпича и камня",
+        "filler": "известь",
+        "adding": "гидравлическая"
+      }
+    }
+  }
+}

@@ -1,0 +1,252 @@
+@import '../sass/vars';
+@import '../sass/mixins';
+
+.main_header, .subheader, .specification {
+  text-align: center;
+}
+
+.main_header {
+  font-size: 1rem;
+}
+.subheader {
+  font-size: 1.1rem;
+}
+
+.specification {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.documentation_section {
+  font-size: .9rem;
+}
+
+.documentation_section h4 {
+  margin: 1rem 0 0 2rem;
+}
+
+.documentation_section p {
+  margin-top: .5rem;
+  color: #595959;
+  @include paragraph_text;
+}
+
+.documentation_section a {
+  display: inline;
+  font-weight: 500;
+  color: $main_color;
+}
+
+.documentation_section a:hover {
+  text-decoration: underline;
+}
+
+.documentation_list {
+  margin-left: 4rem;
+  line-height: 1.5rem;
+  color: #595959;
+}
+
+.toc li a {
+  position: relative;
+  width:fit-content;
+  margin-left: .2rem;
+  color: $main_color;
+}
+
+.toc ol li {
+  display: flex;
+  align-items: center;
+}
+
+.toc {
+  margin-bottom: 2rem;
+  color: $main_color;
+  background-color: #f1f1f1;
+  padding: 1rem 4rem;
+  border-radius: 10px;
+
+  &__submenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: $outline_yellow;
+    border-radius: .2rem;
+    transition: ease-out .3s;
+    font-size: .8rem;
+  }
+
+  &__submenu_none {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  &__submenu a {
+    padding: 0;
+  }
+
+  &__submenu svg {
+    width: 20px;
+    height: 20px;
+    transition: ease .4s;
+  }
+
+  &__submenu:hover {
+    cursor: pointer;
+  }
+
+  &__submenu_list {
+    display: none;
+    position: absolute;
+    width: 22rem;
+    background-color: $main_color;
+    border-radius: .2rem;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  &__submenu_list a {
+    color: #d9d9d9 !important;
+  }
+
+  &__submenu_list a:hover {
+    color: $outline_yellow !important;
+  }
+
+  &__submenu_list ul {
+    margin-left: 0;
+    list-style-type: none;
+  }
+
+  &__submenu_active {
+    background-color: $main_color;
+  }
+
+  &__submenu_list_active {
+    display: block;
+    left: 2rem;
+    top: 0;
+    -webkit-animation-name: fade_in;
+    -webkit-animation-duration: 1s;
+    animation-name: fade_in;
+    animation-duration: 1s;
+    @include box_shadow_hover;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  display: none;
+  font-size: 24px;
+  border: $border_style_grey;
+  color: #fff;
+  background: $main_color;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background: $outline_yellow;
+  color: $main_color;
+  text-decoration: none;
+  border: $border_style_yellow;
+}
+
+@keyframes fade_in {
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+@-webkit-keyframes fade_in {
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+.specification_nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: .5rem 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: .8rem;
+  color: $main_color;
+
+  &__title {
+    margin-bottom: .5rem;
+    width: 100%;
+    border-bottom: $border_style_grey;
+    text-indent: 0 !important;
+    text-align: center !important;
+  }
+
+  &__material {
+    padding: .3rem .6rem;
+    border-radius: 5px;
+    border: $border_style_yellow;
+  }
+
+  &__material:hover {
+    cursor: pointer;
+    background-color: $outline_yellow;
+  }
+
+  &__material:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.tables {
+  width: 90%;
+  margin: 0 auto;
+
+  &__slider {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__block {
+    width: fit-content;
+    margin-right: 3px;
+  }
+
+  &__slider_line {
+    display: flex;
+    transition: all ease-in-out .6s;
+  }
+
+  &__block table {
+    width: 100%;
+  }
+
+  &__block table tbody tr td:first-child {
+    width: 65%;
+  }
+
+  &__block table caption {
+    padding: 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+    color: $main_color;
+  }
+
+}
+
+.active {
+  background-color: $outline_yellow;
+}

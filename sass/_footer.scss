@@ -1,0 +1,72 @@
+@import 'vars';
+@import 'mixins';
+
+.footer {
+  color: #d9d9d9;
+  font-family: $text-font;
+  font-size: .8rem;
+
+  &__info_contacts{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: .5rem;
+    border-bottom: $border_style_grey;
+  }
+
+  &__contacts p {
+    padding-right: 1rem;
+    margin-bottom: .3rem;
+    color: #d9d9d9;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem 3rem;
+    justify-content: center;
+  }
+
+  &__menu_block {
+    padding: .5rem 1rem;
+  }
+
+  &__menu_block_title{
+    color: $outline_yellow;
+    padding-left: 0;
+  }
+
+  &__menu_link {
+    padding-left: 0;
+    color: #d9d9d9;
+    font-size: 0.7rem;
+  }
+
+  &__menu_link:hover {
+    color: $outline_yellow;
+    text-decoration: none;
+  }
+
+  &__links_block {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    width: fit-content;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__link:hover path {
+    fill: $outline_yellow;
+  }
+}

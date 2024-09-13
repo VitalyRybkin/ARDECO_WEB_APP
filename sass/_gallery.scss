@@ -1,0 +1,148 @@
+@import 'vars';
+
+.gallery {
+  width: 100%;
+  position: relative;
+
+  &__product {
+    width: 17%;
+    position: absolute;
+    padding: 2rem;
+    top: 9rem;
+    left: 6rem;
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+
+  &__product_title {
+    color: $outline_yellow;
+  }
+
+  &__product_info {
+    padding: .2rem 0 0.2rem 0.7rem;
+    color: #d9d9d9;
+    border-left: $border_style_yellow;
+  }
+
+  &__product_info:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+
+  &__product_link {
+    margin-top: 1.5rem;
+    border: 1px solid $outline_yellow;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    font-size: 0.8rem;
+    width: fit-content;
+    color: #d9d9d9;
+  }
+
+  &__product_link:hover {
+    background-color: $outline_yellow;
+    color: black;
+    text-decoration: none;
+  }
+
+  &__block{
+    width: 100%;
+    display: none;
+    transition: display ease-out 1s;
+  }
+
+  &__block img {
+    width: 100%;
+  }
+
+  &__nav-block {
+    display: flex;
+    justify-content: center;
+    margin-top: -4rem;
+  }
+
+  &__nav-menu {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    z-index: 1000;
+    opacity: 0.7;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all .5s;
+    padding: .4rem .8rem;
+    border: 1px solid #000000;
+    //border: 1px solid #000;
+  }
+
+  &__nav-menu:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  //&__shift-btn {
+  //  display: flex;
+  //  justify-content: center;
+  //  width: 3rem;
+  //  height: 3rem;
+  //  cursor: pointer;
+  //  text-align: center;
+  //  font-size: 1.8rem;
+  //}
+  //
+  //&__shift-btn:not(:last-child) {
+  //  margin-right: .2rem;
+  //}
+
+  &__crumbs {
+    display: flex;
+    margin-right: .2rem;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0.7;
+  }
+
+  &__dot {
+    display: block;
+    border-radius: 3px;
+    width: 5rem;
+    height: .4rem;
+    background-color: #000000;
+    transition: ease .3s;
+  }
+
+  &__dot:hover {
+    //background-color: aliceblue;
+    cursor: pointer;
+    width: 6rem;
+    height: .6rem;
+  }
+
+  &__dot:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.active {
+  background-color: #ffffff;
+}
+
+.prev {
+  border-radius: 50% 0 0 50%;
+}
+
+.fade_in {
+  display: block;
+  -webkit-animation-name: fade_in;
+  -webkit-animation-duration: 3s;
+  animation-name: fade_in;
+  animation-duration: 4s;
+}
+
+@keyframes fade_in {
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+@-webkit-keyframes fade_in {
+  from{opacity: 0}
+  to{opacity: 1}
+}

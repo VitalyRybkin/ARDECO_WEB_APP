@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%- include("layouts/links.ejs") %>
+    <%- include("layouts/yandex.ejs") %>
+
+    <script src="../static/script/main.js" defer></script>
+
+    <title><%=title %></title>
+</head>
+<body>
+
+    <%- include("layouts/header.ejs") %>
+
+    <div class="center">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="/">ГЛАВНАЯ</a></li>
+                <li><a class="breadcrumbs__disabled" href="#">|</a></li>
+                <li><a class="breadcrumbs__disabled" href="#">ARDECO <%=title %></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="center">
+        <div class="container">
+        <section>
+            <h3 class="group__title">МАТЕРИАЛЫ ARDECO <%=title %></h3>
+            <div class="materials">
+                <% for(var item in groupItems) {%>
+                <div class="materials__block" onclick="window.location.href='<%=groupItems[item].route %>';">
+                    <img class="materials__pic" src="<%=groupItems[item].pic %>" alt="bag pic">
+                    <h5 class="materials__title"><%=groupItems[item].title %></h5>
+                    <div class="materials__tags">
+                        <% var fraction = groupItems[item].fraction.replace("_", " ") %>
+                        <% var hardness = groupItems[item].hardness.replace("_", " ") %>
+                        <span tooltip="фракция"><a class="materials__shortcut" href="/search?parameter=fraction&value=<%=groupItems[item].fraction %>"><%=fraction %></a></span>
+                        <% if (groupItems[item].hardness !== "") {%>
+                            <span tooltip="прочность на сжатие"><a class="materials__shortcut" href="/search?parameter=hardness&value=<%=groupItems[item].hardness %>"><%=hardness %></a></span>
+                        <% } %>
+                        <% if (groupItems[item].filler !== "") {%>
+                            <span tooltip="вяжущее"><a class="materials__shortcut" href="/search?parameter=filler&value=<%=groupItems[item].filler %>"><%=groupItems[item].filler %></a></span>
+                        <% } %>
+                        <% if (groupItems[item].adding !== "") {%>
+                            <span tooltip="добавка"><a class="materials__shortcut" href="/search?parameter=adding&value=<%=groupItems[item].adding %>"><%=groupItems[item].adding %></a></span>
+                        <% } %>
+                    </div>
+                    <p class="materials__desc"><%=groupItems[item].description %></p>
+                </div>
+                <%} %>
+            </div>
+        </section>
+        </div>
+
+    </main>
+
+    <%- include("layouts/footer.ejs") %>
+
+</body>
+</html>

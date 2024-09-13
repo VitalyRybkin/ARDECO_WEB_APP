@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%- include("layouts/links.ejs") %>
+    <%- include("layouts/yandex.ejs") %>
+
+    <script src="../static/script/main.js" defer></script>
+    <script src="../static/script/email.js" defer></script>
+
+    <title><%= title %></title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init({
+                publicKey: "HD-bL7coOj44LwsSx",
+                blockList: {
+                    list: ['foo@emailjs.com', 'bar@emailjs.com'],
+                    watchVariable: 'user_email',
+                },
+            });
+        })();
+    </script>
+
+</head>
+<body>
+
+<%- include("layouts/header.ejs") %>
+
+<div class="center">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li><a href="/">ГЛАВНАЯ</a></li>
+            <li><a class="breadcrumbs__disabled" href="#">|</a></li>
+            <li><a class="breadcrumbs__disabled" href="#">КОНТАКТЫ</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="alert" role="alert">
+    <p class="alert__title">Неправильный формат электронной почты!</p>
+    <button class="alert__close"></button>
+</div>
+
+<main class="center">
+    <div class="container">
+        <h4 class="contact-form__title">Контакты:</h4>
+        <div class="vcard">
+            <div>
+                <span class="fn org">ООО «АВАНГАРД»</span>
+            </div>
+            <div class="adr">
+                <span class="locality">Россия. Санкт-Петербург.</span>,
+                <span class="street-address">2-й Муринский пр., д. 38.</span>
+            </div>
+            <div>Телефон: <span class="tel">+7 (812) 334-53-21</span></div>
+            <div>Время работы: <span class="workhours">пн-пт, с 9:00 до 18:00</span>
+            </div>
+        </div>
+        <h4 class="contact-form__title">Написать нам:</h4>
+        <form id="contact-form">
+            <div class="contact-form__block">
+                <div class="contact-form__row">
+                    <label for="user_name">Ваше имя:</label><br>
+                    <input type="text" id="user_name" required><br>
+                    <label for="organization">Наименование организации:</label><br>
+                    <input type="text" id="organization" required><br>
+                </div>
+                <div class="contact-form__row">
+                    <label for="user_email">Электронная почта:</label><br>
+                    <input type="email" id="user_email" title="Поле не заполнено или заполнено неверно" required><br>
+                    <label for="subject">Тема сообщения:</label><br>
+                    <input type="text" id="subject" required><br>
+                </div>
+                <div class="contact-form__row">
+                    <label for="phone">Телефон:</label><br>
+                    <input type="tel" id="phone"><br>
+                </div>
+            </div>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" required></textarea>
+            <button id="submit" type="submit">Отправить</button>
+        </form>
+    </div>
+
+</main>
+
+<%- include("layouts/footer.ejs") %>
+
+</body>
+</html>

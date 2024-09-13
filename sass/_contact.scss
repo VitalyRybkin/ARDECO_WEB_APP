@@ -1,0 +1,153 @@
+@import '../sass/vars';
+@import '../sass/mixins';
+
+.alert {
+  display: none;
+  padding: 0 0 1rem 0;
+  position: fixed;
+  background-color: #ffffff;
+  border: 1px solid #c15673;
+  top: 40%;
+  opacity: 0;
+  animation: .3s .2s anim-lineUp ease-out forwards;
+
+  &__title {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #c15673;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  &__close {
+    width: 40%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: $border_style_red;
+    background-color: $outline_yellow;
+    color: $main_color;
+    font-family: "Ubuntu", sans-serif;
+    font-size: .9rem;
+  }
+
+  &__close:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+
+  }
+}
+
+.vcard {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  font-family: "Ubuntu", sans-serif;
+  color: $main_color;
+  margin-bottom: 2rem;
+}
+
+.vcard div:not(:last-child){
+  margin-bottom: .5rem;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  color: $main_color;
+}
+
+#contact-form label {
+  margin-bottom: .5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.contact-form {
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__row {
+    padding-right: 1rem;
+  }
+}
+
+input[type=text], input[type=email], input[type=tel] {
+  width: 15rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 1rem;
+  color: #555555;
+  font-family: "Open Sans", sans-serif;
+  font-size: .8rem;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
+  outline: none;
+  border: 2px solid $outline_yellow;
+  line-height: 1.5rem;
+  border-radius: 3px;
+}
+
+#contact-form textarea:focus {
+  outline: none;
+  border: 1px solid $outline_yellow;
+  border-radius: 3px;
+}
+
+#contact-form textarea {
+  width: 86%;
+  height: 10rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+#submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  font: inherit;
+  cursor: pointer !important;
+  border: solid 1px $main_color;
+  border-radius: 4px;
+  padding: 0.5em 4em;
+  color: $main_color;
+  background-color: $outline_yellow;
+  transition: background-color 0.3s;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#submit::before {
+  padding-top: .4rem;
+  margin-right: .4rem;
+  content: url("/static/images/email-envelope.svg");
+}
+
+#submit:hover::before {
+  margin-right: .4rem;
+  content: url("/static/images/email-envelope-check.svg");
+}

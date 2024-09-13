@@ -1,0 +1,24 @@
+@mixin box_shadow_hover {
+  -webkit-box-shadow: 0 26px 78px -39px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 26px 78px -39px rgba(0,0,0,0.75);
+  box-shadow: 0 26px 78px -39px rgba(0,0,0,0.75);
+}
+
+@mixin box_shadow {
+  -webkit-box-shadow: 0 0 16px -6px rgba(82,82,82,1);
+  -moz-box-shadow: 0 0 16px -6px rgba(82,82,82,1);
+  box-shadow: 0 0 16px -6px rgba(82,82,82,1);
+}
+
+@mixin section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+@mixin paragraph_text {
+  line-height: 1.5rem;
+  text-indent: 2rem;
+  text-align: justify;
+}

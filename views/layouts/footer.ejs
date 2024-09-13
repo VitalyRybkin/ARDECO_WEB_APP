@@ -1,0 +1,29 @@
+<footer class="footer center">
+    <div class="container">
+        <div class="footer__contacts">
+            <div class="footer__info_contacts">
+                <p>РОССИЯ. САНКТ-ПЕТЕРБУРГ. 2-Й МУРИНСКИЙ ПР., Д. 38.</p>
+                <p>+7 (812) 334-53-21</p>
+            </div>
+            <div class="footer__info_about">
+                <p>&copy; 2012 - <%=currentYear %>, ООО "АВАНГАРД" - СУХИЕ СТРОИТЕЛЬНЫЕ СМЕСИ</p>
+            </div>
+        </div>
+
+        <div class="footer__menu">
+            <% for(var group in material) {%>
+            <div class="footer__menu_block">
+                <a class="footer__menu_block_title link" href="/group/<%=material[group].route %>"><%=group %></a>
+                <% for(var item in material[group].materials) {%>
+                <a class="footer__menu_link" href="<%=material[group].materials[item].route %>"><%=item %></a>
+                <%} %>
+            </div>
+            <%} %>
+        </div>
+        <hr>
+        <div class="footer__links_block">
+            <a href="http://mixity.spb.ru/" target="_blank" class="footer__link"><%- include("../../static/images/mixity-logo.svg") %></a>
+            <a href="http://aquanol.spb.ru/" target="_blank" class="footer__link"><%- include("../../static/images/aquanol-logo.svg") %></a>
+        </div>
+    </div>
+</footer>

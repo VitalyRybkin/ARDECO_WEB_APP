@@ -1,0 +1,38 @@
+<header class="header center">
+    <div class="container">
+        <div class="header__menu">
+            <div class="header__menu_block">
+                <nav class="header__nav">
+                    <a id="show_modal" href="#" class="header__nav_item link">Продукция</a>
+                    <a href="/contact" class="header__nav_item link">Контакты</a>
+                    <a id="show_modal_certs" href="#" class="header__nav_item link">Сертификаты</a>
+                    <a href="/trademark" class="header__nav_item link">Товарный знак</a>
+                </nav>
+            </div>
+            <div id="modal_menu" class="modal_menu hidden">
+                <% for(var group in material) {%>
+                <div class="modal__menu_block">
+                    <a class="modal__menu_block_title link" href="/group/<%=material[group].route %>"><%=group %></a>
+                    <% for(var item in material[group].materials) {%>
+                        <a class="modal__menu_link" href="<%=material[group].materials[item].route %>"><%=item %></a>
+                    <%} %>
+                </div>
+                <%} %>
+            </div>
+            <div id="modal_menu_certs" class="modal_menu_certs hidden">
+                <div class="modal__menu_block">
+                    <a class="modal__menu_link" href="../../static/certificates/ARDECO_GOST-R.pdf" target="_blank">СЕРТИФИКАТ СООТВЕТСТВИЯ ГОСТ Р</a>
+                    <a class="modal__menu_link" href="../../static/certificates/ARDECO_fire_solution.pdf" target="_blank">РЕШЕНИЕ (пожарная безопасность)</a>
+                    <a class="modal__menu_link" href="../../static/certificates/ARDECO_SGR_plaster.pdf" target="_blank">СВИДЕТЕЛЬСТВО О ГОСУДАРСТВЕННОЙ РЕГИСТРАЦИИ ARDECO (штукатурки)</a>
+                    <a class="modal__menu_link" href="../../static/certificates/ARDECO_SGR_putty.pdf" target="_blank">СВИДЕТЕЛЬСТВО О ГОСУДАРСТВЕННОЙ РЕГИСТРАЦИИ ARDECO (шпаклевки)</a>
+                    <a class="modal__menu_link" href="../../static/certificates/KGIOP_letter_1.pdf" target="_blank">ПИСЬМО КГИОП от 14.01.2020 г. (ОРИГИНАЛЬНЫЕ, САНИРУЮЩИЕ, ПРОФИ)</a>
+                    <a class="modal__menu_link" href="../../static/certificates/KGIOP_letter_2.pdf" target="_blank">ПИСЬМО КГИОП от 11.02.2020 г. (КЛАССИКА)</a>
+                </div>
+            </div>
+        </div>
+
+        <a class="header__logo" href="/">
+            <img src="/static/images/logo-ardeco.png" alt="logo pic">
+        </a>
+    </div>
+</header>
